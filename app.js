@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initRoadmap();
     initClosureSection();
     initParticles();
+    initVideo();
 });
 
 // ============================================
@@ -772,6 +773,25 @@ function initParticles() {
         particle.style.animationDelay = `${Math.random() * 5}s`;
         particle.style.animationDuration = `${5 + Math.random() * 10}s`;
         particlesContainer.appendChild(particle);
+    }
+}
+
+// ============================================
+// VIDEO SECTION
+// ============================================
+function initVideo() {
+    const isLocal = window.location.protocol === 'file:';
+    const videoWrapper = document.querySelector('.video-wrapper');
+    const iframe = videoWrapper ? videoWrapper.querySelector('iframe') : null;
+    const fallback = document.getElementById('videoFallback');
+
+    if (isLocal && iframe && fallback) {
+        // On local protocol, YouTube often blocks embeds.
+        // We hide the iframe so it doesn't show the error screen,
+        // and show the fallback button instead.
+        iframe.style.display = 'none';
+        fallback.style.zIndex = '10';
+        fallback.style.background = 'rgba(10, 10, 15, 0.95)';
     }
 }
 
