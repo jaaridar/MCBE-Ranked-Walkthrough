@@ -464,27 +464,51 @@ function initBackendTransparency() {
     function renderEvents() {
         if (!logContent) return;
 
-        logContent.innerHTML = '';
+        // Add newest event if it exists
+        if (events.length > 0) {
+            if (logContent.querySelector('.log-waiting')) {
+                logContent.innerHTML = '';
+            }
 
-        if (events.length === 0) {
-            logContent.innerHTML = '<div class="log-waiting">Waiting for events...</div>';
-            return;
+            const currentRenderedCount = logContent.querySelectorAll('.log-entry').length;
+
+            // If we have new events to render
+            if (currentRenderedCount < events.length) {
+                // Just render the last one for smoothness
+                const lastLog = events[events.length - 1];
+                const entry = document.createElement('div');
+                entry.className = 'log-entry';
+                entry.style.opacity = '0';
+                entry.style.transform = 'translateY(10px)';
+                entry.style.transition = 'all 0.3s ease';
+
+                entry.innerHTML = `
+                    <span class="log-timestamp">[${lastLog.timestamp}]</span>
+                    <span class="log-event ${lastLog.type === 'subscribe' ? 'subscribe' : lastLog.event}">${lastLog.event}</span>
+                    <span class="log-arrow">→</span>
+                    <span class="log-data">${lastLog.data}</span>
+                `;
+                logContent.appendChild(entry);
+
+                // Animate in
+                requestAnimationFrame(() => {
+                    entry.style.opacity = '1';
+                    entry.style.transform = 'translateY(0)';
+                });
+
+                // Maintain max count
+                const entries = logContent.querySelectorAll('.log-entry');
+                if (entries.length > maxEvents) {
+                    entries[0].remove();
+                }
+            }
         }
 
-        events.forEach(log => {
-            const entry = document.createElement('div');
-            entry.className = 'log-entry';
-            entry.innerHTML = `
-                <span class="log-timestamp">[${log.timestamp}]</span>
-                <span class="log-event ${log.type === 'subscribe' ? 'subscribe' : log.event}">${log.event}</span>
-                <span class="log-arrow">→</span>
-                <span class="log-data">${log.data}</span>
-            `;
-            logContent.appendChild(entry);
+        // Auto-scroll to bottom smoothly
+        logContent.scrollTo({
+            top: logContent.scrollHeight,
+            behavior: 'smooth'
         });
-
-        // Auto-scroll to bottom
-        logContent.scrollTop = logContent.scrollHeight;
     }
 
     function startEventStream() {

@@ -157,32 +157,40 @@
                                 <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.8" />
                                 <stop offset="100%" stop-color="#10b981" stop-opacity="0.2" />
                             </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur" />
+                                    <feMergeNode in="SourceGraphic" />
+                                </feMerge>
+                            </filter>
                         </defs>
 
                         <!-- Path from Player 1 to Tunnel -->
                         <path id="path-p1-tunnel" d="M 150 120 L 500 200" fill="none" stroke="rgba(255,255,255,0.05)"
                             stroke-width="2" />
-                        <circle r="4" fill="#06b6d4">
-                            <animateMotion dur="3s" repeatCount="indefinite" path="M 150 120 L 500 200" />
+                        <circle r="6" fill="#06b6d4" filter="url(#glow)">
+                            <animateMotion dur="3s" repeatCount="indefinite" path="M 150 120 L 500 200" begin="0s" />
                         </circle>
 
                         <!-- Path from Player 2 to Tunnel -->
                         <path id="path-p2-tunnel" d="M 150 280 L 500 200" fill="none" stroke="rgba(255,255,255,0.05)"
                             stroke-width="2" />
-                        <circle r="4" fill="#06b6d4">
-                            <animateMotion dur="3.5s" repeatCount="indefinite" path="M 150 280 L 500 200" />
+                        <circle r="6" fill="#06b6d4" filter="url(#glow)">
+                            <animateMotion dur="3.5s" repeatCount="indefinite" path="M 150 280 L 500 200"
+                                begin="0.5s" />
                         </circle>
 
                         <!-- Path from Tunnel to Server -->
                         <path id="path-tunnel-server" d="M 500 200 L 850 200" fill="none"
                             stroke="rgba(255,255,255,0.05)" stroke-width="2" />
-                        <circle r="5" fill="#10b981">
-                            <animateMotion dur="2s" repeatCount="indefinite" path="M 500 200 L 850 200" />
+                        <circle r="8" fill="#10b981" filter="url(#glow)">
+                            <animateMotion dur="2s" repeatCount="indefinite" path="M 500 200 L 850 200" begin="0s" />
                         </circle>
 
                         <!-- Return path from Server to Tunnel -->
-                        <circle r="3" fill="#a855f7">
-                            <animateMotion dur="2.5s" repeatCount="indefinite" path="M 850 200 L 500 200" />
+                        <circle r="5" fill="#a855f7" filter="url(#glow)">
+                            <animateMotion dur="2.5s" repeatCount="indefinite" path="M 850 200 L 500 200" begin="0s" />
                         </circle>
                     </svg>
 
@@ -473,6 +481,12 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
+                        <div class="video-fallback" id="videoFallback">
+                            <p>Video blocked by local security? (Error 153)</p>
+                            <a href="https://youtu.be/iKDqYzm-UNQ" target="_blank" class="btn btn-primary">
+                                Launch on YouTube →
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
