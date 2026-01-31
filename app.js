@@ -488,18 +488,28 @@ function initBackendTransparency() {
     }
 
     function startEventStream() {
-        eventInterval = setInterval(() => {
-            events.push(generateEvent());
-            if (events.length > maxEvents) {
-                events = events.slice(-maxEvents);
-            }
-            renderEvents();
-        }, 1500);
+        if (eventInterval) stopEventStream();
+
+        function queueNext() {
+            const delay = 800 + Math.random() * 2000; // Randomized delay for realism
+            eventInterval = setTimeout(() => {
+                if (!isRunning) return;
+
+                events.push(generateEvent());
+                if (events.length > maxEvents) {
+                    events = events.slice(-maxEvents);
+                }
+                renderEvents();
+                queueNext();
+            }, delay);
+        }
+
+        queueNext();
     }
 
     function stopEventStream() {
         if (eventInterval) {
-            clearInterval(eventInterval);
+            clearTimeout(eventInterval);
             eventInterval = null;
         }
     }

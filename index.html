@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCBE Ranked — Real-Time Speedrun Orchestration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav id="navbar" class="navbar">
@@ -17,7 +21,8 @@
                 <div class="nav-logo" onclick="scrollToSection('hero')">
                     <div class="logo-icon">
                         <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                     </div>
                     <span class="logo-text">MCBE Ranked</span>
@@ -38,10 +43,13 @@
                 <!-- Mobile Menu Button -->
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <svg class="menu-icon" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
-                    <svg class="close-icon hidden" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    <svg class="close-icon hidden" width="24" height="24" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
@@ -80,7 +88,7 @@
                 <h1 class="hero-title">MCBE Ranked</h1>
 
                 <p class="hero-subtitle">
-                    A unified backend service orchestrating competitive Minecraft Bedrock speedruns with 
+                    A unified backend service orchestrating competitive Minecraft Bedrock speedruns with
                     <span class="highlight-emerald">real-time event synchronization</span> across all platforms
                 </p>
 
@@ -105,7 +113,8 @@
                     <button class="btn btn-primary" onclick="scrollToSection('architecture')">
                         Explore Architecture
                         <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                     </button>
                     <button class="btn btn-secondary" onclick="scrollToSection('walkthrough')">
@@ -115,7 +124,8 @@
 
                 <div class="scroll-indicator">
                     <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                     </svg>
                 </div>
             </div>
@@ -128,27 +138,52 @@
                 <div class="section-header hidden-section">
                     <div class="section-badge badge-emerald">
                         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                         </svg>
                         <span>System Architecture</span>
                     </div>
                     <h2 class="section-title">Two Connected Clients</h2>
-                    <p class="section-subtitle">Players connect through ngrok tunnel for global accessibility, which then routes to the central WebSocket server for event orchestration</p>
+                    <p class="section-subtitle">Players connect through ngrok tunnel for global accessibility, which
+                        then routes to the central WebSocket server for event orchestration</p>
                 </div>
 
                 <!-- Architecture Diagram -->
                 <div class="architecture-diagram hidden-section">
-                    <svg class="connection-lines">
+                    <svg class="connection-lines" viewBox="0 0 1000 400" preserveAspectRatio="none">
                         <defs>
                             <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#10b981" stop-opacity="0.5" />
+                                <stop offset="0%" stop-color="#10b981" stop-opacity="0.2" />
                                 <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.8" />
-                                <stop offset="100%" stop-color="#10b981" stop-opacity="0.5" />
+                                <stop offset="100%" stop-color="#10b981" stop-opacity="0.2" />
                             </linearGradient>
                         </defs>
-                        <line x1="15%" y1="30%" x2="50%" y2="50%" stroke="url(#lineGradient)" stroke-width="2" class="connection-line" />
-                        <line x1="15%" y1="70%" x2="50%" y2="50%" stroke="url(#lineGradient)" stroke-width="2" class="connection-line" />
-                        <line x1="50%" y1="50%" x2="85%" y2="50%" stroke="url(#lineGradient)" stroke-width="2" class="connection-line" />
+
+                        <!-- Path from Player 1 to Tunnel -->
+                        <path id="path-p1-tunnel" d="M 150 120 L 500 200" fill="none" stroke="rgba(255,255,255,0.05)"
+                            stroke-width="2" />
+                        <circle r="4" fill="#06b6d4">
+                            <animateMotion dur="3s" repeatCount="indefinite" path="M 150 120 L 500 200" />
+                        </circle>
+
+                        <!-- Path from Player 2 to Tunnel -->
+                        <path id="path-p2-tunnel" d="M 150 280 L 500 200" fill="none" stroke="rgba(255,255,255,0.05)"
+                            stroke-width="2" />
+                        <circle r="4" fill="#06b6d4">
+                            <animateMotion dur="3.5s" repeatCount="indefinite" path="M 150 280 L 500 200" />
+                        </circle>
+
+                        <!-- Path from Tunnel to Server -->
+                        <path id="path-tunnel-server" d="M 500 200 L 850 200" fill="none"
+                            stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+                        <circle r="5" fill="#10b981">
+                            <animateMotion dur="2s" repeatCount="indefinite" path="M 500 200 L 850 200" />
+                        </circle>
+
+                        <!-- Return path from Server to Tunnel -->
+                        <circle r="3" fill="#a855f7">
+                            <animateMotion dur="2.5s" repeatCount="indefinite" path="M 850 200 L 500 200" />
+                        </circle>
                     </svg>
 
                     <div class="arch-node" style="left: 15%; top: 30%;">
@@ -217,12 +252,14 @@
                 <div class="section-header hidden-section">
                     <div class="section-badge badge-cyan">
                         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                         </svg>
                         <span>Core Capabilities</span>
                     </div>
                     <h2 class="section-title">Built for Competitive Play</h2>
-                    <p class="section-subtitle">Essential features designed for seamless speedrun orchestration and fair competition</p>
+                    <p class="section-subtitle">Essential features designed for seamless speedrun orchestration and fair
+                        competition</p>
                 </div>
 
                 <div class="capabilities-grid hidden-section" id="capabilitiesGrid">
@@ -239,8 +276,10 @@
                 <div class="section-header hidden-section">
                     <div class="section-badge badge-purple">
                         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <span>Interactive Experience</span>
                     </div>
@@ -285,12 +324,14 @@
                 <div class="section-header hidden-section">
                     <div class="section-badge badge-cyan">
                         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                         </svg>
                         <span>Backend Transparency</span>
                     </div>
                     <h2 class="section-title">Live Event Logging</h2>
-                    <p class="section-subtitle">Real-time visibility into subscribed events as they flow through the system</p>
+                    <p class="section-subtitle">Real-time visibility into subscribed events as they flow through the
+                        system</p>
                 </div>
 
                 <div class="backend-container hidden-section">
@@ -336,14 +377,17 @@
                 <div class="section-header hidden-section">
                     <div class="section-badge badge-pink">
                         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                         </svg>
                         <span>Community Insights</span>
                     </div>
                     <h2 class="section-title">Community Survey Insights</h2>
-                    <p class="section-subtitle">We surveyed 20+ core MCBE speedrunners and identified these 8 critical pain points</p>
+                    <p class="section-subtitle">We surveyed 20+ core MCBE speedrunners and identified these 8 critical
+                        pain points</p>
                     <p class="survey-date">Survey conducted on January 7, 2026</p>
-                    <a href="https://docs.google.com/forms/d/1ybLla_N5AsNbSKAMD-6-pOdDDI0hgmdJqA9_lj99iP0/edit" target="_blank" rel="noopener noreferrer" class="feedback-btn">
+                    <a href="https://docs.google.com/forms/d/1ybLla_N5AsNbSKAMD-6-pOdDDI0hgmdJqA9_lj99iP0/edit"
+                        target="_blank" rel="noopener noreferrer" class="feedback-btn">
                         <span>📝</span>
                         <span>Share Your Feedback</span>
                     </a>
@@ -382,7 +426,8 @@
                 <div class="section-header hidden-section">
                     <div class="section-badge badge-indigo">
                         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                         </svg>
                         <span>Development Roadmap</span>
                     </div>
@@ -411,8 +456,10 @@
                 <div class="section-header hidden-section">
                     <div class="section-badge badge-red">
                         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <span>Video Demo</span>
                     </div>
@@ -422,10 +469,8 @@
 
                 <div class="video-container hidden-section" id="videoContainer">
                     <div class="video-wrapper">
-                        <iframe 
-                            src="https://www.youtube.com/embed/iKDqYzm-UNQ" 
-                            title="MCBE Ranked Demo" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        <iframe src="https://www.youtube.com/embed/iKDqYzm-UNQ" title="MCBE Ranked Demo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -448,7 +493,8 @@
                     </div>
                     <h2 class="closure-title">MCBE Ranked</h2>
                     <p class="closure-subtitle">
-                        A unified backend service bringing competitive Minecraft Bedrock speedrunning to players worldwide, 
+                        A unified backend service bringing competitive Minecraft Bedrock speedrunning to players
+                        worldwide,
                         regardless of their platform or location.
                     </p>
                 </div>
@@ -460,12 +506,14 @@
                 <div class="closure-message hidden-section">
                     <div class="message-box">
                         <p class="message-primary">Built with transparency and fair competition at its core.</p>
-                        <p class="message-secondary">MCBE Ranked is designed to serve the speedrunning community with honest, reliable infrastructure for competitive play.</p>
+                        <p class="message-secondary">MCBE Ranked is designed to serve the speedrunning community with
+                            honest, reliable infrastructure for competitive play.</p>
                     </div>
 
                     <button class="back-to-top-btn" onclick="scrollToSection('hero')">
                         <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 10l7-7m0 0l7 7m-7-7v18" />
                         </svg>
                         Back to Top
                     </button>
@@ -480,4 +528,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
